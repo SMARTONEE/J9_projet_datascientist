@@ -59,22 +59,22 @@ def max_handles(handles)
 
     nbcara = 0
 
-    while nbcara <= 35
+    while nbcara <= 33
         puts "Il y a dans cette liste #{handles.count {|x| x.length == nbcara}} handle d'une taille de #{nbcara} caractère"
         nbcara += 1
     end
 end
 
 
-puts "what do you want to know ?
-    1 : 
-    2 : 
-    3 :
-    4 : 
-    5 :
-    6 :
-    7 : 
-    8 : "
+puts "what do you want to know/do ?
+    1 : Combien de journalistes dans ce tableau ? 
+    2 : Quel est l'identifiant le plus court ?
+    3 : Le nombre d'ID avec 4 caractères
+    4 : Le nombre d'ID commençant par une majuscule 
+    5 : Trier le tableau par ordre alphabétique 
+    6 : Trier le tableau selon le nombre de caractère des ID par ordre croissant 
+    7 : La positio de l'ID 
+    8 : Le nombre d'ID selon leur taille"
 number = gets.to_i 
 
     if number == 1
@@ -91,7 +91,7 @@ number = gets.to_i
             puts size_handles(handles)
         elsif number == 7
             puts position_handles(handles)
-        elsif nuber == 8 
+        elsif number == 8 
             puts max_handles(handles)
     end
 
